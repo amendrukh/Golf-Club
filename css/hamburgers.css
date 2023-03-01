@@ -58,7 +58,7 @@
    * Spring
    */
 .hamburger__spring .hamburger__inner {
-  top: -20px;
+  top: -8px;
   transition: background-color 0s 0.13s linear; }
   .hamburger__spring .hamburger__inner::before {
     top: 40px;
