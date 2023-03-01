@@ -110,20 +110,23 @@
 }
 
 .banner__header {
-    display: grid;
+    display: block;
     width: 85%;
     margin: auto;
 }
 
 .banner__title {
+    width: 100%;
     font-family: "Amiri", serif;
     font-weight: 400;
-    font-size: 3.4rem;
+    font-size: 7rem;
     color: var(--title-color-white);
-    line-height: 3.4rem;
+    line-height: 7.4rem;
+
 }
 
 .banner__desc {
+    width: 100%;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
@@ -133,6 +136,9 @@
 }
 
 .banner__btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     font-size: 1.03rem;
@@ -140,18 +146,23 @@
 }
 
 .banner__btn-link {
-    max-width: 160px;
-    max-height: 53px;
-    display: block;
+    display: inline-flex;
+    width: 40%;
+    min-height: 100px;
+    justify-content: center;
     text-decoration: none;
+    font-size: 2.5rem;
+    align-items: center;
     color: var(--title-color-white);
     border: 2px solid var(--background-color-lime);
     background-color: var(--background-color-lime);
     padding: 15px 20px;
+    margin-bottom: 70px;
+
 }
 
 .banner__btn-link:first-child {
-    margin: 0 0 20px  0;
+
 }
 
 .banner__btn-link:first-child:hover {
@@ -162,10 +173,12 @@
 }
 
 .banner__btn-link:last-child {
-    max-width: 126px;
+    width: 35%;
+    height: 100%;
     background-color: unset;
     color: var(--btn-color-lime);
-    margin: 0 0 40px  0;
+    margin-bottom: 100px;
+
 }
 
 .banner__btn-link:last-child:hover {
