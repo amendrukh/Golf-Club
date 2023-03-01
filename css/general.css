@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Merriweather:wght@400;700&family=Roboto&family=Roboto+Slab&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+/*font-family: 'Amiri', serif;*/
+/*font-family: 'Merriweather', serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Roboto Slab', serif;*/
+/*font-family: 'Source Sans Pro', sans-serif;*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    --background-color-humburger: #29626e ;
+    --background-color-dark-grey:rgb(129,127,128);
+    --background-color-grey: rgb(130,129,130, 0.9);
+    --background-color-lime: #d5b665;
+    --background-color-dark-lime: #bb9c4d;
+    --background-color-white: #ffffff;
+    --btn-color-lime: #d5b665;
+    --title-color-light: #f1f1f1;
+    --title-color-white: #ffffff;
+    --btn-color-white: #ffffff;
+    --humburger-color-light: #f1f1f1;
+    --subtitle-color-dark: #134A56;
+    --content-color-light: #f9f6ed;
+    --content-color-grey: #6F7779;
+    --content-color-dark: #134A56;
+    --border-color-lime: #d5b665;
+    --border-color-white: #ffffff;
+
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+

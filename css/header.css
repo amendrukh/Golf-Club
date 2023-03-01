@@ -1,0 +1,241 @@
+.header__nav {
+    display: none;
+}
+
+.header {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    background: url("../img/header/cover.png") no-repeat;
+    background-size: cover;
+}
+
+.header__humburger {
+    background: var(--background-color-humburger);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s ease-in-out;
+}
+
+.header__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px 30px 15px;
+}
+
+.wrapper__item {
+    text-align: center;
+}
+
+.wrapper__item:first-child {
+    width: 90%;
+}
+
+.wrapper__item:last-child {
+    width: 16%;
+}
+
+.wrapper__item img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav__wrapper {
+    display: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.13rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.nav__wrapper-el:first-child {
+    padding-bottom: 20px;
+}
+
+.wrapper__el-link {
+    display: inline-block;
+    max-width: 28px;
+    max-height: 28px;
+    background: var(--background-color-lime);
+}
+
+.wrapper__el-link:hover{
+    background: var(--background-color-dark-lime);
+}
+
+.wrapper__el-link {
+    padding: 5px;
+    text-align: center;
+}
+
+.wrapper__el-link:not(:last-child) {
+    margin-right: 5px;
+}
+
+.link__img {
+    display: inline;
+    max-width: 15px;
+    max-height: 15px;
+    color: #f9f6ed;
+}
+
+.nav__wrapper-list {
+    width: 100%;
+}
+
+.wrapper-list-el {
+    padding: 10px 0 10px 0;
+}
+
+.wrapper-list-el a {
+    text-decoration: none;
+    color: var(--title-color-light);
+}
+
+.banner {
+    display: none;
+    width: 100%;
+    padding: 144px 0 0 0;
+}
+
+.active {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+
+.banner__header {
+    display: grid;
+    width: 85%;
+    margin: auto;
+}
+
+.banner__title {
+    font-family: "Amiri", serif;
+    font-weight: 400;
+    font-size: 3.4rem;
+    color: var(--title-color-white);
+    line-height: 3.4rem;
+}
+
+.banner__desc {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 50px 0 70px 0;
+    color: var(--content-color-light);
+    line-height: 1.5rem;
+}
+
+.banner__btn {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    font-size: 1.03rem;
+    text-align: center;
+}
+
+.banner__btn-link {
+    max-width: 160px;
+    max-height: 53px;
+    display: block;
+    text-decoration: none;
+    color: var(--title-color-white);
+    border: 2px solid var(--background-color-lime);
+    background-color: var(--background-color-lime);
+    padding: 15px 20px;
+}
+
+.banner__btn-link:first-child {
+    margin: 0 0 20px  0;
+}
+
+.banner__btn-link:first-child:hover {
+    background-color: var(--btn-color-white);
+    border-color: var(--border-color-white);
+    color: var(--content-color-dark);
+    transition: all 500ms ease-in-out;
+}
+
+.banner__btn-link:last-child {
+    max-width: 126px;
+    background-color: unset;
+    color: var(--btn-color-lime);
+    margin: 0 0 40px  0;
+}
+
+.banner__btn-link:last-child:hover {
+    border: 2px solid var(--background-color-lime);
+    background-color: var(--background-color-lime);
+    color: var(--btn-color-white);
+    transition: all 500ms ease-in-out;
+}
+
+.nav__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    grid-row-gap: 2rem;
+    width: 85%;
+    margin: auto;
+}
+
+.nav__list-el {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: .88rem;
+    background-color: var(--background-color-white);
+    padding: 30px;
+}
+
+.nav__list-el:first-child .el__icon {
+    background: url("../img/general/golf-icon.svg") no-repeat;
+    background-size: contain;
+}
+
+.nav__list-el:nth-child(2) .el__icon {
+    background: url("../img/general/golf-player-icon.svg") no-repeat;
+    background-size: contain;
+}
+
+.nav__list-el:nth-child(3) .el__icon {
+    background: url("../img/general/golf-sticks-icon.svg") no-repeat;
+    background-size: contain;
+}
+
+.nav__list-el:nth-child(4) .el__icon {
+    background: url("../img/general/cup-icon.svg") no-repeat;
+    background-size: contain;
+}
+
+.el__icon {
+    position: absolute;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.el__title {
+    font-family: "Amiri", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 60px 0 0 0;
+    color: var(--subtitle-color-dark);
+}
+
+.el__line {
+    display: block;
+    height: 3px;
+    width: 15%;
+    background-color: var(--border-color-lime);
+}
+
+.el__desc {
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: .88rem;
+    padding-top: 11px;
+    color: var(--content-color-grey);
+}
