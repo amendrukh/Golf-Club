@@ -47,20 +47,18 @@
     display: none;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
-    font-size: 1.13rem;
+    font-size:4rem;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
 .nav__wrapper-el:first-child {
-    padding-bottom: 20px;
+    padding: 100px 0 50px 0;
 }
 
 .wrapper__el-link {
     display: inline-block;
-    max-width: 28px;
-    max-height: 28px;
     background: var(--background-color-lime);
 }
 
@@ -69,7 +67,7 @@
 }
 
 .wrapper__el-link {
-    padding: 5px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -78,9 +76,9 @@
 }
 
 .link__img {
-    display: inline;
-    max-width: 15px;
-    max-height: 15px;
+    display: flex;
+    max-width: 60px;
+    max-height: 60px;
     color: #f9f6ed;
 }
 
@@ -93,14 +91,13 @@
 }
 
 .wrapper-list-el a {
-    text-decoration: none;
     color: var(--title-color-light);
 }
 
 .banner {
     display: none;
     width: 100%;
-    padding: 144px 0 0 0;
+    padding: 250px 0 0 0;
 }
 
 .active {
@@ -129,10 +126,10 @@
     width: 100%;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 3.25rem;
     padding: 50px 0 70px 0;
     color: var(--content-color-light);
-    line-height: 1.5rem;
+    line-height: 4.5rem;
 }
 
 .banner__btn {
@@ -192,6 +189,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows:  500px 500px 500px 500px;
     list-style-type: none;
     grid-row-gap: 2rem;
     width: 85%;
@@ -227,28 +225,28 @@
 
 .el__icon {
     position: absolute;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 120px;
+    min-width: 150px;
 }
 
 .el__title {
     font-family: "Amiri", serif;
     font-weight: 400;
-    font-size: 1.5rem;
-    padding: 60px 0 0 0;
+    font-size: 3.5rem;
+    padding: 140px 0 0 0;
     color: var(--subtitle-color-dark);
 }
 
 .el__line {
     display: block;
-    height: 3px;
+    height: 6px;
     width: 15%;
     background-color: var(--border-color-lime);
 }
 
 .el__desc {
     font-family:'Source Sans Pro', sans-serif;
-    font-size: .88rem;
-    padding-top: 11px;
+    font-size: .9rem;
+    padding-top: 15px;
     color: var(--content-color-grey);
 }
