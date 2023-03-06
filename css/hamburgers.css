@@ -6,7 +6,8 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 15px 15px;
+  width: 100%;
+  /*padding: 5px 5px;*/
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -29,7 +30,7 @@
     background-color: var(--humburger-color-light); }
 
 .hamburger__box {
-  width: 40px;
+  width: 70%;
   height: 24px;
   display: inline-block;
   position: relative; }
@@ -39,8 +40,8 @@
   top: 50%;
   margin-top: -2px; }
   .hamburger__inner, .hamburger__inner::before, .hamburger__inner::after {
-    width: 85px;
-    height: 9px;
+    width: 100%;
+    height: 10px;
     background-color: var(--humburger-color-light);
     position: absolute;
     transition-property: transform;
@@ -54,28 +55,26 @@
   .hamburger__inner::after {
     bottom: -10px; }
 
-/*
-   * Spring
-   */
+/*Spring*/
 .hamburger__spring .hamburger__inner {
-  top: -8px;
+  top: -100%;
   transition: background-color 0s 0.13s linear; }
   .hamburger__spring .hamburger__inner::before {
-    top: 40px;
+    top: 60px;
     transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger__spring .hamburger__inner::after {
-    top: 20px;
+    top: 30px;
     transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger__spring.is-active .hamburger__inner {
   transition-delay: 0.22s;
   background-color: transparent !important; }
   .hamburger__spring.is-active .hamburger__inner::before {
-    top: 0;
+    top: 20px;
     transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, 10px, 0) rotate(45deg); }
   .hamburger__spring.is-active .hamburger__inner::after {
-    top: 0;
+    top: 20px;
     transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, 10px, 0) rotate(-45deg); }
 
