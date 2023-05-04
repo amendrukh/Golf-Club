@@ -1,0 +1,461 @@
+@import "general.scss";
+
+body {
+  .header__humburger {
+    background: map-get($colors, "turquoise-light");
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  background: url("../img/header/cover.webp") no-repeat;
+  background-size: cover;
+  @include media("min", "md") {
+    background-size: 195%;
+  }
+  @include media("min", "xl") {
+    background-size: 100%;
+  }
+
+  & {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__nav {
+    display: none;
+    @include media("min", "xl") {
+      width: 95%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 auto;
+      &-item {
+        width: 25%;
+        box-sizing: border-box;
+        padding: 16px 16px 0 0;
+
+        & > img {
+          width: 100%;
+        }
+
+        .header__item-list {
+          width: 100%;
+          height: 100%;
+          display: inline-flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: unset;
+          margin: unset;
+          align-items: center;
+
+          &-el {
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 20px;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 3px;
+              background-color: map-get($colors, "white-light");
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              width: 100%;
+            }
+
+            & > a {
+              width: 25%;
+              color: map-get($colors, "white-light");
+            }
+          }
+        }
+
+        .header__links {
+          width: 100%;
+          height: 100%;
+          display: inline-flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          &-link {
+            width: 15%;
+
+            .header__link-img {
+              max-width: 18px;
+              max-height: 18px;
+              background: map-get($colors, "lime");
+              padding: 5px;
+            }
+
+            .header__link-img:hover {
+              background: map-get($colors, "lime-dark");
+            }
+          }
+        }
+      }
+
+      &-item:last-child {
+        width: 15%;
+        padding-right: 0;
+      }
+
+      &-item:nth-child(2n) {
+        width: 60%;
+      }
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    @include media("min", "xl") {
+      display: none;
+    }
+
+    &__header {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 15px 30px 15px;
+      z-index: 2;
+      background-color: map-get($colors, "grey-light");
+      box-shadow: 0 10px 13px 10px map-get($colors, "grey-light"), 10px 5px 18px 5px map-get($colors, "grey-light");
+      @include media("min", "md") {
+        position: relative;
+        background-color: unset;
+        box-shadow: unset;
+        padding: 30px;
+      }
+
+      .header__item {
+        width: 90%;
+        text-align: center;
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          @include media("min", "md") {
+            width: 50%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &__hamburger {
+      width: 20%;
+      @include media("min", "md") {
+        width: 10%;
+      }
+    }
+
+    /*z nen*/
+    .nav__wrapper {
+      display: none;
+      position: fixed;
+      overflow: hidden;
+      opacity: 0;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      font-size: 1.13rem;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: opacity 0.1s ease-in 0ms;
+
+      &-el {
+        &:first-child {
+          padding: 115px 0 10px 0;
+          @include media("min", "md") {
+            padding: 0 0 20px 0;
+          }
+
+          .wrapper__el-list {
+            width: 100%;
+            padding: unset;
+            margin-top: 50px;
+
+            .list__item {
+              padding: 10px 0 10px 0;
+
+              a {
+                color: map-get($colors, "white-light");
+              }
+            }
+          }
+        }
+
+        .wrapper__el-link {
+          display: inline-block;
+          background: map-get($colors, "lime");
+          padding: 3px;
+          text-align: center;
+
+          &:hover {
+            background: map-get($colors, "lime-dark");
+          }
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          .link__img {
+            display: flex;
+            max-width: 25px;
+            max-height: 25px;
+            color: map-get($colors, "white-double-light")
+          }
+        }
+      }
+    }
+  }
+
+
+  .banner {
+    display: none;
+    width: 100%;
+    padding: 100px 0 0 0;
+
+    &__header {
+      display: block;
+      width: 85%;
+      margin: auto;
+      @include media("min", "md") {
+        width: 95%;
+      }
+
+      &-title {
+        width: 100%;
+        font-family: "Amiri", serif;
+        font-weight: 400;
+        font-size: 3.37rem;
+        color: map-get($colors, "white");
+        line-height: 4.4rem;
+        padding-top: 135px;
+        margin: unset;
+        @include media("min", "md") {
+          font-size: 4.75rem;
+          padding-top: 100px;
+        }
+        @include media("min", "xl") {
+
+          padding-top: 60px;
+        }
+      }
+
+      &-desc {
+        width: 100%;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        padding: 50px 0 70px 0;
+        margin: unset;
+        color: map-get($colors, "white-light");
+        line-height: 2rem;
+        @include media("min", "md") {
+          padding: 30px 0 35px 0;
+        }
+      }
+
+      .banner__header-btn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+        font-size: 1.03rem;
+        text-align: center;
+        @include media("min", "md") {
+          width: 50%;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-bottom: 30px;
+        }
+        @include media("min", "xl") {
+          width: 28%;
+        }
+
+        .banner__header-btn-link {
+          display: inline-flex;
+          width: 40%;
+          min-height: 53px;
+          max-height: 53px;
+          justify-content: center;
+          text-decoration: none;
+          font-size: 1.1rem;
+          align-items: center;
+          color: map-get($colors, "white");
+          border: 2px solid map-get($colors, "lime");
+          background-color: map-get($colors, "lime");
+          padding: 2px 23px;
+          margin-bottom: 25px;
+          @include media("min", "md") {
+            width: 32%;
+          }
+
+          &:first-child:hover {
+            background-color: map-get($colors, "white");
+            border-color: map-get($colors, "white");
+            color: map-get($colors, "turquoise-dark");
+            transition: all 500ms ease-in-out;
+          }
+
+          &:last-child {
+            width: 35%;
+            height: 100%;
+            background-color: unset;
+            color: map-get($colors, "lime");
+            margin-bottom: 100px;
+            @include media("min", "md") {
+              width: 32%;
+            }
+            @include media("min", "xl") {
+              margin-bottom: 50px;
+            }
+          }
+
+          &:last-child:hover {
+            border: 2px solid map-get($colors, "lime");
+            background-color: map-get($colors, "lime");
+            color: #ffffff;
+            transition: all 500ms ease-in-out;
+          }
+        }
+      }
+    }
+
+    .banner_nav {
+      .nav__list {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  250px 250px 250px 250px;
+        list-style-type: none;
+        grid-row-gap: 2rem;
+        width: 85%;
+        margin: 0 auto;
+        padding: unset;
+        @include media("min", "md") {
+          width: 95%;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows:  250px;
+          grid-column-gap: 20px;
+        }
+        @include media("min", "xl") {
+          grid-column-gap: 33px;
+        }
+
+        &-el {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: .88rem;
+          background-color: map-get($colors, "white");
+          padding: 27px;
+          max-height: 258px;
+          @include media("min", "md") {
+            padding: 17px 12px;
+          }
+
+          &:first-child .el__icon {
+            background: url("../img/general/golf-icon.webp") no-repeat;
+            background-size: contain;
+          }
+
+          &:nth-child(2) .el__icon {
+            background: url("../img/general/golf-player-icon.webp") no-repeat;
+            background-size: contain;
+          }
+
+          &:nth-child(3) .el__icon {
+            background: url("../img/general/golf-sticks-icon.webp") no-repeat;
+            background-size: contain;
+          }
+
+          &:nth-child(4) .el__icon {
+            background: url("../img/general/cup-icon.webp") no-repeat;
+            background-size: contain;
+          }
+
+          .el__icon {
+            position: absolute;
+            min-height: 50px;
+            min-width: 50px;
+          }
+
+          .el__title {
+            font-family: "Amiri", serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            padding: 70px 0 0 0;
+            margin: 0;
+            color: map-get($colors, "turquoise-dark");
+            @include media("min", "md") {
+              font-size: 1.63rem;
+              padding: 70px 0 20px 0;
+            }
+            @include media("min", "xl") {
+              font-size: 1.75rem;
+            }
+          }
+
+          .el__line {
+            display: block;
+            min-height: 4px;
+            width: 15%;
+            background-color: map-get($colors, "lime");
+          }
+
+          .el__desc {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: .87rem;
+            margin: 30px 0 10px 0;
+            color: map-get($colors, "grey");
+            @include media("min", "md") {
+              font-size: 1rem;
+              margin: 20px 0 17px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & {
+    .active {
+      @include visibility;
+    }
+
+    & {
+      .wrapper {
+        .header_reverse {
+          box-shadow: none;
+          background-color: map-get($colors, "turquoise-light");
+        }
+
+        .active {
+          @include visibility;
+        }
+      }
+    }
+  }
+}
+
+
